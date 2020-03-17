@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>服务 | vue-gmap</title>
+    <meta name="description" content="基于 vue 、高德地图 JS API 和 UI 组件库的地图组件库">
+    <link rel="icon" href="/logo.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.79540640.css" as="style"><link rel="preload" href="/assets/js/app.9babd72c.js" as="script"><link rel="preload" href="/assets/js/5.0cbf4920.js" as="script"><link rel="preload" href="/assets/js/24.26d0fd5c.js" as="script"><link rel="preload" href="/assets/js/6.651a5ab4.js" as="script"><link rel="preload" href="/assets/js/7.9e4172b6.js" as="script"><link rel="preload" href="/assets/js/14.7915ae88.js" as="script"><link rel="prefetch" href="/assets/js/1.1daaefb7.js"><link rel="prefetch" href="/assets/js/10.cc8af59c.js"><link rel="prefetch" href="/assets/js/11.3dbf33fd.js"><link rel="prefetch" href="/assets/js/12.f4215532.js"><link rel="prefetch" href="/assets/js/13.6e85417c.js"><link rel="prefetch" href="/assets/js/15.07acb6b6.js"><link rel="prefetch" href="/assets/js/16.993b257b.js"><link rel="prefetch" href="/assets/js/17.0ff98a43.js"><link rel="prefetch" href="/assets/js/18.4813a7a1.js"><link rel="prefetch" href="/assets/js/19.1e1041b6.js"><link rel="prefetch" href="/assets/js/20.8d2d827e.js"><link rel="prefetch" href="/assets/js/21.c125d95d.js"><link rel="prefetch" href="/assets/js/22.af99a7c3.js"><link rel="prefetch" href="/assets/js/23.020ad152.js"><link rel="prefetch" href="/assets/js/25.2950317a.js"><link rel="prefetch" href="/assets/js/26.adacec78.js"><link rel="prefetch" href="/assets/js/27.aa23cdf3.js"><link rel="prefetch" href="/assets/js/8.b807b002.js"><link rel="prefetch" href="/assets/js/9.df1989dc.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.962cc153.js"><link rel="prefetch" href="/assets/js/vendors~notification.1aaa2715.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.79540640.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">vue-gmap</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">指南</a></div><div class="nav-item"><a href="/example/" class="nav-link router-link-active">示例</a></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">指南</a></div><div class="nav-item"><a href="/example/" class="nav-link router-link-active">示例</a></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>示例</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/example/life-cycle.html" class="sidebar-link">地图生命周期</a></li><li><a href="/example/service.html" class="active sidebar-link">服务</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/example/service.html#线路规划" class="sidebar-link">线路规划</a></li><li class="sidebar-sub-header"><a href="/example/service.html#轨迹纠偏" class="sidebar-link">轨迹纠偏</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="服务"><a href="#服务" class="header-anchor">#</a> 服务</h1> <h2 id="线路规划"><a href="#线路规划" class="header-anchor">#</a> 线路规划</h2> <br> <div class="grasp__container" data-v-5371294f><el-gmap class="g-map" data-v-5371294f><el-gmap-path config="[object Object]" points="" data-v-5371294f></el-gmap-path></el-gmap></div> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>  <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>grasp__container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-gmap</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>g-map<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-gmap-path</span>
+        <span class="token attr-name">:config</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>pathConfig<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:points</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>pathPoints<span class="token punctuation">&quot;</span></span>
+      <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-gmap</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> Driving <span class="token keyword">from</span> <span class="token string">'../../../../../src/services/driving'</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> originPath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./data'</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        pathConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+          renderOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+            pathLineStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+              strokeStyle<span class="token operator">:</span> <span class="token string">'#2BA6EF'</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            pathLineHoverStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+              strokeStyle<span class="token operator">:</span> <span class="token string">'#2BA6EF'</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            pathLineSelectedStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+              strokeStyle<span class="token operator">:</span> <span class="token string">'#541545'</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        pathPoints<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        wayPoints<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            lat<span class="token operator">:</span> <span class="token number">39.865042</span><span class="token punctuation">,</span>
+            lng<span class="token operator">:</span> <span class="token number">116.379028</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            lat<span class="token operator">:</span> <span class="token number">39.903719</span><span class="token punctuation">,</span>
+            lng<span class="token operator">:</span> <span class="token number">116.427281</span>
+          <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">drawPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token keyword">async</span> <span class="token function">drawPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> driving <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Driving</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> driving<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">116.379028</span><span class="token punctuation">,</span> <span class="token number">39.865042</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">116.427281</span><span class="token punctuation">,</span> <span class="token number">39.903719</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> waypoints<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">115.379028</span><span class="token punctuation">,</span> <span class="token number">39.865042</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">116.427281</span><span class="token punctuation">,</span> <span class="token number">39.903719</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">const</span> steps <span class="token operator">=</span> result<span class="token punctuation">.</span>routes<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>steps
+        <span class="token keyword">let</span> path <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        steps<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          path <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>path<span class="token punctuation">,</span> <span class="token operator">...</span>item<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">row</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">[</span>row<span class="token punctuation">.</span>lng<span class="token punctuation">,</span> row<span class="token punctuation">.</span>lat<span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>pathPoints <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">'规划线路'</span><span class="token punctuation">,</span>
+          path
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>scss<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.grasp</span> <span class="token punctuation">{</span>
+    <span class="token selector">&amp;__container</span> <span class="token punctuation">{</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="轨迹纠偏"><a href="#轨迹纠偏" class="header-anchor">#</a> 轨迹纠偏</h2> <p>轨迹纠偏服务插件。用于将一组带方向的、可能偏离道路的经纬度轨迹，纠正为准确沿着道路的一条经纬度路径。比如将一组间隔采集的车辆位置和朝向、速度、时间等信息传入，可以得到一组沿着道路行进的经纬度路径和总的行驶历程。</p> <div class="grasp__container" data-v-091ae519><el-gmap class="g-map" data-v-091ae519><el-gmap-path config="[object Object]" points="" data-v-091ae519></el-gmap-path></el-gmap></div> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>  <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>grasp__container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-gmap</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>g-map<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-gmap-path</span>
+       <span class="token attr-name">:config</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>pathConfig<span class="token punctuation">&quot;</span></span>
+       <span class="token attr-name">:points</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>pathPoints<span class="token punctuation">&quot;</span></span>
+     <span class="token punctuation">/&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-gmap</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> GraspRoad <span class="token keyword">from</span> <span class="token string">'../../../../../src/services/grasp-road'</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> originPath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./data'</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        pathConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+          renderOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+            pathLineStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+              strokeStyle<span class="token operator">:</span> <span class="token string">'#2BA6EF'</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            pathLineHoverStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+              strokeStyle<span class="token operator">:</span> <span class="token string">'#2BA6EF'</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            pathLineSelectedStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+              strokeStyle<span class="token operator">:</span> <span class="token string">'#541545'</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        pathPoints<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">drawPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token keyword">async</span> <span class="token function">graspRoad</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> path <span class="token operator">=</span> originPath<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 搞不懂为什么高德要这么传参</span>
+           <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+             <span class="token keyword">return</span> <span class="token punctuation">{</span>
+               x<span class="token operator">:</span> item<span class="token punctuation">.</span>lng<span class="token punctuation">,</span>
+               y<span class="token operator">:</span> item<span class="token punctuation">.</span>lat<span class="token punctuation">,</span>
+               sp<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+               ag<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+               tm<span class="token operator">:</span> <span class="token number">1478031031</span>
+             <span class="token punctuation">}</span>
+           <span class="token punctuation">}</span>
+           <span class="token keyword">return</span> <span class="token punctuation">{</span>
+             x<span class="token operator">:</span> item<span class="token punctuation">.</span>lng<span class="token punctuation">,</span>
+             y<span class="token operator">:</span> item<span class="token punctuation">.</span>lat<span class="token punctuation">,</span>
+             sp<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+             ag<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+             tm<span class="token operator">:</span> index <span class="token operator">+</span> <span class="token number">2</span>
+           <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token keyword">await</span> <span class="token keyword">new</span> <span class="token class-name">GraspRoad</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">driving</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token keyword">async</span> <span class="token function">drawPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> tempData <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">graspRoad</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>pathPoints <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">'原轨迹'</span><span class="token punctuation">,</span>
+          path<span class="token operator">:</span> originPath<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">[</span>item<span class="token punctuation">.</span>lng<span class="token punctuation">,</span> item<span class="token punctuation">.</span>lat<span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">'纠偏之后轨迹'</span><span class="token punctuation">,</span>
+          path<span class="token operator">:</span> tempData<span class="token punctuation">.</span>points<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">[</span>item<span class="token punctuation">.</span>x<span class="token punctuation">,</span> item<span class="token punctuation">.</span>y<span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>pathPoints<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>scss<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.grasp</span> <span class="token punctuation">{</span>
+    <span class="token selector">&amp;__container</span> <span class="token punctuation">{</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/vuejs/vuepress/edit/master/packages/docs/docs/example/service.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020-1-26 18:03:11</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/example/life-cycle.html" class="prev">地图生命周期</a></span> <!----></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.9babd72c.js" defer></script><script src="/assets/js/5.0cbf4920.js" defer></script><script src="/assets/js/24.26d0fd5c.js" defer></script><script src="/assets/js/6.651a5ab4.js" defer></script><script src="/assets/js/7.9e4172b6.js" defer></script><script src="/assets/js/14.7915ae88.js" defer></script>
+  </body>
+</html>
