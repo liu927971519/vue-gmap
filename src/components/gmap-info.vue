@@ -10,6 +10,14 @@ export default {
       type: String,
       default: ''
     },
+    infoTitleTemplate: {
+      type: String,
+      default: ''
+    },
+    infoBodyTemplate: {
+      type: String,
+      default: ''
+    },
     config: {
       type: Object,
       default: _ => {
@@ -83,8 +91,9 @@ export default {
     },
     initInfoSimplifier(SimpleInfoWindow) {
       this.infoSimplifierIns = new SimpleInfoWindow(extend(true, {
-        infoTitle: '',
-        infoBody: '',
+        infoTitle: this.infoTitleTemplate,
+        infoBody: this.infoBodyTemplate,
+        infoTplData: this.tplData,
         offset: new AMap.Pixel(0, -5)
       }, this.config))
       this.bindEvent()
