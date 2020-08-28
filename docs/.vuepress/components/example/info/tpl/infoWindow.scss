@@ -1,0 +1,30 @@
+.driver-info {
+  .el-card__header {
+    color: #45484D;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .margin-left-right {
+    margin: 0 3px;
+    color: #45484D;
+  }
+  .info-body {
+    font-size: 14px;
+    color: #45484D;
+    p {
+      line-height: 24px;
+    }
+    .title {
+      color: #93969B;
+    }
+    .info {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .margin-bottom-8 {
+      margin-bottom: 8px;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 {
   "name": "@liulijian/vue-gmap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/vue-gmap.umd.js",
   "unpkg": "dist/vue-gmap.umd.min.js",
   "description": "基于 vue 、高德地图 JS API 和 UI 组件库的地图组件库",
   "author": "DaLi Liu",
-  "keywords":  [
+  "keywords": [
     "vue",
     "高德",
     "amap",
