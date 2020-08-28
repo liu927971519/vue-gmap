@@ -2,9 +2,10 @@ import GMap from './components/gmap.vue'
 import GmapPoint from './components/gmap-point.vue'
 import GmapPath from './components/gmap-path'
 import GmapInfo from './components/gmap-info'
+import GmapSimpleMarker from './components/gmap-simple-marker'
 import { initAMapApiLoader } from './services/injected-amap-api-instance'
 import Driving from './services/driving'
-const components = [GMap, GmapPoint, GmapPath, GmapInfo]
+const components = [GMap, GmapPoint, GmapPath, GmapInfo, GmapSimpleMarker]
 
 const VueGMap = {
   initAMapApiLoader,
